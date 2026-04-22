@@ -1,0 +1,71 @@
+/* Reset básico para quitar márgenes molestos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos de la Navbar */
+.navbar {
+    background-color: #2c3e50; /* Color oscuro profesional */
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    color: white;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilos del Menú */
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #3498db; /* Azul claro al pasar el mouse */
+}
+
+/* Botón de Hamburguesa (Oculto en PC) */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive: Para celulares */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Aquí luego podrías usar JS para mostrarlo */
+    }
+
+    .nav-toggle {
+        display: block; /* Se muestra solo en pantallas pequeñas */
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+}
