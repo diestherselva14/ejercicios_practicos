@@ -31,3 +31,8 @@ df = pd.DataFrame(datos_titanic)
 
 print(f"Dimensiones del dataset: {df.shape[0]} filas y {df.shape[1]} columnas.\n")
 
+print(df.dtypes)
+print("-" * 40)
+
+print(df.isnull().sum())
+print("-" * 40)
