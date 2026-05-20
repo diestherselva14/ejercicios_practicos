@@ -35,3 +35,7 @@ print(f"Dimensiones: {filas} filas y {columnas} columnas.\n")
 print("Tipos de datos por columna:")
 print(df.dtypes)
 print("-" * 40)
+
+print("Valores nulos detectados:")
+print(df.isnull().sum())
+print("-" * 40)
