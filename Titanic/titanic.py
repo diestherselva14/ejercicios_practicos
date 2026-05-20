@@ -29,10 +29,9 @@ datos_titanic = {
 
 df = pd.DataFrame(datos_titanic)
 
-print(f"Dimensiones del dataset: {df.shape[0]} filas y {df.shape[1]} columnas.\n")
+filas, columnas = df.shape
+print(f"Dimensiones: {filas} filas y {columnas} columnas.\n")
 
+print("Tipos de datos por columna:")
 print(df.dtypes)
-print("-" * 40)
-
-print(df.isnull().sum())
 print("-" * 40)
