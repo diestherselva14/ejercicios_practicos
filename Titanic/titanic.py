@@ -39,3 +39,13 @@ print("-" * 40)
 print("Valores nulos detectados:")
 print(df.isnull().sum())
 print("-" * 40)
+
+print("Visualización tabular (Supervivencia según el Sexo):")
+print(pd.crosstab(df['sobrevive'], df['sexo']))
+
+print(f"Cantidad de duplicados: {df.duplicated().sum()}")
+
+mediana_edad = df['edad'].median()
+print(f"Mediana calculada para la edad: {mediana_edad}")
+df['edad'] = df['edad'].fillna(mediana_edad)
+
