@@ -49,3 +49,11 @@ mediana_edad = df['edad'].median()
 print(f"Mediana calculada para la edad: {mediana_edad}")
 df['edad'] = df['edad'].fillna(mediana_edad)
 
+df_resultado = df.drop(columns=['pasajero_id'])
+
+print("-" * 40)
+print("Conteo de nulos finalizado:")
+print(df_resultado.isnull().sum())
+
+print("\nPrimeros 5 registros del DataFrame limpio:")
+print(df_resultado.head())
