@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container">
+        <span style = "background-color: lightblue; padding: 10px; border-radius: 5px;">Mi Primer pagina de JS
+            
+        </span> 
+
+        
+        <p>Esta pagina demuestra el uso basico de JavaScript.</p>
+
+        <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+        <button onclick="cambiarColor()">Cambiar Color</button>
+        <button onclick="mostrarFecha()">Mostrar Fecha</button>
+
+        <div id = "resultados" class = "result" style="display:none;">
+
+        </div>
+
+        <scrip>
+            let ContadorMensaje = 0;
+            const colores = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#33FFF5'];
+            let colorIndex = 0;
+
+            funtion mostrarMensaje(){
+                contadorMensajes++;
+                const mensaje = 'Este es el mensaje' #${contadorMensajes};
+                const resultadosDiv = document.getElementById('resultados');
+
+                resultasoDiv.innerHTML= '
+                    <h3>Mensaje Recibido</h3>
+                    <p>${mensaje}</p>
+                    <p>TimeStamp: ${new Date().toLocaleString()}</p>
+                ';
+                
+            }
+            funtion cambiarColor(){
+
+            }
+        </scrip>
+    
+</body>
+</html>

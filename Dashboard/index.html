@@ -3,64 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de admin</title>
-
+    <title>Dental House Nic - Panel de Admin</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <h1 class="logo">panel de admin</h1>
+            <h1 class="logo">🦷 Dental House Nic</h1>
             <div class="user-info">
-                <span class="user-name">Juan perez</span>
-                <div class="user-avatar">jp</div>
+                <span class="user-name">Diesther (Admin)</span>
+                <div class="user-avatar">DL</div>
             </div>
         </div>
     </header>
 
-
-
-    <div class="main-container">
+    <div class="app-container">
+        
         <aside class="sidebar">
             <nav class="sidebar-nav">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#dashboard" class="nav-link activate">
+                        <a href="#dashboard" class="nav-link active">
                             <span class="nav-icon">📊</span>
                             <span class="nav-text">Dashboard</span>
-                            
-
-                        </a>
-                        <a href="#Usuario" class="nav-link activate">
-                            <span class="nav-icon">💁‍♂️</span>
-                            <span class="nav-text">Usuarios</span>
-                            
-
-                        </a>
-                        <a href="#productos" class="nav-link activate">
-                            <span class="nav-icon">📊</span>
-                            <span class="nav-text">Productos</span>
-                            
-
-                        </a>
-                        <a href="#Configuracion" class="nav-link activate">
-                            <span class="nav-icon">📊</span>
-                            <span class="nav-text">Configuración</span>
-                            
-
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a href="#pacientes" class="nav-link">
+                            <span class="nav-icon">💁‍♂️</span>
+                            <span class="nav-text">Pacientes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#citas" class="nav-link">
+                            <span class="nav-icon">📅</span>
+                            <span class="nav-text">Citas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tratamientos" class="nav-link">
+                            <span class="nav-icon">🩺</span>
+                            <span class="nav-text">Tratamientos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#configuracion" class="nav-link">
+                            <span class="nav-icon">⚙️</span>
+                            <span class="nav-text">Configuración</span>
+                        </a>
+                    </li>
                 </ul>
-
-
             </nav>
         </aside>
-        <main class="main-container">
+
+        <main class="main-content">
+            <header class="main-header">
+                <h2>Resumen General</h2>
+                <p>Bienvenido al sistema de administración de Diriamba.</p>
+            </header>
+
+            <div class="kpi-cards">
+                <div class="kpi-card">
+                    <h3>Pacientes Atendidos</h3>
+                    <p class="kpi-value">142</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Citas Hoy</h3>
+                    <p class="kpi-value">8</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Ingresos del Día</h3>
+                    <p class="kpi-value">C$ 4,500</p>
+                </div>
+            </div>
+
+            <section class="recent-activity">
+                <h3>Últimos Movimientos</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Tratamiento</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carlos Ruiz</td>
+                            <td>Limpieza Ultrasónica</td>
+                            <td>23/04/2026</td>
+                            <td><span class="status completed">Completado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ana Silva</td>
+                            <td>Ortodoncia (Ajuste)</td>
+                            <td>23/04/2026</td>
+                            <td><span class="status pending">En espera</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
     </div>
-
-
 </body>
 </html>
