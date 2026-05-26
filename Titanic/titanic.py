@@ -27,26 +27,29 @@ datos_titanic = {
                   'S', 'S', 'S', 'S', 'Q', 'S', 'C', 'S']
 }
 
-df = pd.DataFrame(datos_titanic)
+df_limpio = pd.DataFrame(datos_titanic)
 
-filas, columnas = df.shape
-print(f"Dimensiones: {filas} filas y {columnas} columnas.\n")
+edad = df_limpio['edad'].values
+tarifa = df_limpio['tarifa'].values
+sobrevive = df_limpio['sobrevive'].values
 
-print("Tipos de datos por columna:")
-print(df.dtypes)
-print("-" * 40)
+def analisis_numpy(datos,nombre):
+    print(f"\n Analisis de {nombre}:")
+    print(f" count: {len(datos)}")
+    print(f" media: {np.mean(datos):.2f}")
+    print(f" mediana: {np.median(datos):.2f}")
+    print(f" std: {np.std(datos):.2f}")
+    print(f" min: {np.min(datos):.2f}")
+    print(f" max: {np.max(datos):.2f}")
+    print(f" Rango: {np.ptp(datos):.2f}")
 
-print("Valores nulos detectados:")
-print(df.isnull().sum())
-print("-" * 40)
+    # Cuantiles
+    print(f"\n  Cuantiles:")
+    print(f" Q1 (25%): {np.percentile(datos, 25):.2f}")
+    print(f" Q2 (50% - Mediana): {np.percentile(datos, 50):.2f}")
+    print(f" Q3 (75%): {np.percentile(datos, 75):.2f}")
+    print(f" IQR: {np.percentile(datos, 75) - np.percentile(datos, 25):.2f}")
 
-print("Visualización tabular (Supervivencia según el Sexo):")
-print(pd.crosstab(df['sobrevive'], df['sexo']))
-
-print(f"Cantidad de duplicados: {df.duplicated().sum()}")
-
-mediana_edad = df['edad'].median()
-print(f"Mediana calculada para la edad: {mediana_edad}")
-df['edad'] = df['edad'].fillna(mediana_edad)
-
-df_resultado = df.drop(columns=['pasajero_id'])
+    analisis_numpy(edad, "Edad")
+    analisis_numpy(tarifa, "Tarifa")
+    analisis_numpy(sobrevive, "Sobrevive")
