@@ -1,19 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Layout</title>
+    <title>Dental House Nic - Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="page-layout">
-    <header class="header">Header</header>
-    <nav class="nav">Navigation</nav>
-    <main class="main">Main Content</main>
-    <aside class="sidebar">Sidebar</aside>
-    <footer class="footer">Footer</footer>
-</div>
-    
+        
+        <header class="header">
+            <h1>Dental House Nic</h1>
+            <p>Sistema de Gestión Odontológica | Sucursal Diriamba</p>
+        </header>
+
+        <nav class="nav">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#pacientes">Expedientes de Pacientes</a></li>
+                <li><a href="#citas">Agenda de Citas</a></li>
+                <li><a href="#inventario">Inventario</a></li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <h2>Panel de Control</h2>
+            
+            <section class="dashboard-cards">
+                <div class="card">
+                    <h3>Citas Programadas para Hoy</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Hora</th>
+                                <th>Paciente</th>
+                                <th>Motivo</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09:00 AM</td>
+                                <td>María López</td>
+                                <td>Limpieza General</td>
+                                <td><span class="badge pending">En espera</span></td>
+                            </tr>
+                            <tr>
+                                <td>10:30 AM</td>
+                                <td>Carlos Ruiz</td>
+                                <td>Extracción</td>
+                                <td><span class="badge confirmed">Confirmada</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>Registro Rápido de Paciente</h3>
+                    <form class="quick-form">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Silva" required>
+                        
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 8515-XXXX" required>
+                        
+                        <button type="submit" class="btn-primary">Guardar Paciente</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Acciones Rápidas</h3>
+            <button class="btn-secondary">+ Nueva Cita</button>
+            <button class="btn-secondary">+ Nuevo Cobro</button>
+            <div class="alert">
+                <p><strong>Aviso:</strong> Revisar inventario de anestesia.</p>
+            </div>
+        </aside>
+
+        <footer class="footer">
+            <p>&copy; 2026 Sistema Dental House Nic. Módulo de Administración.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
